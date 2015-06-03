@@ -1,5 +1,4 @@
-hidden-data-extractor
-====================
+# hidden-data-extractor
 
 Server side scripts to extract data that is embedded in web pages as javascript variables or JSON. 
 
@@ -15,8 +14,7 @@ An example is contained in test.html
 
 As i've used a fashion site in the example it is likely that this example will stop working when this item is no longer fashionable. 
 
-Requirements:
-=============
+## Requirements:
 
 PHP-CLI 5.0+ 
 PhantomJS - http://phantomjs.org/
