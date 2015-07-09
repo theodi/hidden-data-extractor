@@ -6,7 +6,7 @@ $.ajaxSetup ({
 
 var myFrame;
 var meta = {};
-
+var requested_url;
 
 $(document).ready(function() {
         $.ajaxSetup({ cache: false });
@@ -17,6 +17,7 @@ $(document).ready(function() {
 function registerListeners() {
 	$( "#submit" ).click(function() {
                 url = $( "#input_url").val();
+		requested_url = url;
                 $( "#front-page" ).fadeOut("slow",function() {
                 	getDataFromURL(url);
 		});
