@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html prefix="dct: http://purl.org/dc/terms/
+              rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+              dcat: http://www.w3.org/ns/dcat#
+              odrs: http://schema.theodi.org/odrs#">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hidden data extractor</title>
+<link href="http://assets.theodi.org/css/odi-bootstrap-pomegranate.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/nv.d3.css">
+<link rel="shortcut icon" href="http://theodi.github.io/hidden-data-extractor//img/odifavicon32.ico">
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"> </script>
+<script src="js/control.js"> </script>
+<script src="http://assets.theodi.org/js/bootstrap-tab.js"> </script>
+
+<script src="js/jquery-1.11.0.min.js"></script>
+<script src="js/jquery.ogp.js"></script>
+<script src="js/control.js"></script>
+
+
+</head>
+<body>
+<nav>
+	<div class='navbar navbar-inverse navbar-static-top' id='topbar'>
+		<div class='container'>
+			<div class='navbar-inner'>
+				<h1><a href="/">Hidden data extractor</a></h1>
+				<span class="label" style="top: -10px; position: absolute; left: 350px;">
+					ODI Experiment
+				</span>
+				<a class='brand' href='http://theodi.org/'>
+					<img alt="Logo" src="http://assets.theodi.org/img/logo-footer.png" />
+				</a>
+			</div>
+		</div>
+	</div>
+</nav>
+<div class='whiteout'>
+	<div class='container main-default' id='main'>
+		<div class='row'>
+
+
+<section id="front-page">
+	<h2>Hidden data extrator</h2>
+	<p>Enter the URL of any webpage to see what JSON data is hidden within it.</p>
+	<p>e.g. <i>http://www.marksandspencer.com/textured-circle-lace-skater-dress/p/p22380707</i></p>
+	<input type="text" id="input_url"></input>
+	<br/>
+	<button type="submit" class="btn btn-primary btn-bl" id="submit">Submit</button>
+</section>
+
+<section id="result"> 
+<table style="width: 100%;" id="data">
+<th width="10%">dispose?</th><th width="10%">Variable name</th><th width="80%">Data</th>
+</table>
+</section>
+
+
+		</div>
+	</div>
+</div>
+
+<footer id='footer' style="bottom: 0; width: 100%; padding-top: 10px; padding-bottom: 10px; min-height: 120px;">
+	<div style="margin-left: auto; margin-right: auto; width: 80%;">
+		<div class='span6 footer-content'>
+			<p> <a href='http://www.openstreetmap.org/?lat=51.522205&amp;lon=-0.08176500000001852&amp;zoom=16&amp;layers=T&amp;mlat=51.52210&amp;mlon=-0.08343'>Open Data Institute</a><span>, 65 Clifton Street, London EC2A 4JE</span></p>
+			<p><a href='mailto:info@theodi.org'>info@theodi.org</a> · Company <a href='http://opencorporates.com/companies/gb/08030289'>08030289</a>	· <span>VAT</span> <span>143 7796 80</span></p>
+		</div>
+		<div style="display: inline-block; float: right;">
+			<p class='license'><a href='http://creativecommons.org/licenses/by-sa/2.0/uk/deed.en_GB' rel='license'><img alt="Creative Commons Licence" height="15" src="http://static.theodi.org/assets/cc-853c95321fbeb898ecb83c38fb156a71.png" width="80" /></a></p>
+		</div>
+	</div>
+</footer>
+</body>
+</html>

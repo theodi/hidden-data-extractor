@@ -24,7 +24,7 @@ function registerListeners() {
 }
 
 function getDataFromURL(url) {
-	$('body').append('<iframe style="display: none;" src="server/proxy.php?site='+url+'" id="iframe" onLoad="getData(myFrame);"></iframe>');
+	$('body').append('<iframe style="display: none;" src="http://odinprac.theodi.org/hidden-data-extractor/proxy.php?site='+url+'" id="iframe" onLoad="getData(myFrame);"></iframe>');
         $( "#result" ).fadeIn("slow",function() {
         })
 }

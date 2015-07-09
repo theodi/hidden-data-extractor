@@ -7,27 +7,9 @@ $.ajaxSetup ({
 var myFrame;
 var meta = {};
 
-
 $(document).ready(function() {
-        $.ajaxSetup({ cache: false });
-        registerListeners();
-        $( "#result" ).hide();
+	myFrame = window.frames[0].window;
 });
-
-function registerListeners() {
-	$( "#submit" ).click(function() {
-                url = $( "#input_url").val();
-                $( "#front-page" ).fadeOut("slow",function() {
-                	getDataFromURL(url);
-		});
-        });
-}
-
-function getDataFromURL(url) {
-	$('body').append('<iframe style="display: none;" src="server/proxy.php?site='+url+'" id="iframe" onLoad="getData(myFrame);"></iframe>');
-        $( "#result" ).fadeIn("slow",function() {
-        })
-}
 
 function dispose(id) {
 	$('#' + id).fadeOut();
