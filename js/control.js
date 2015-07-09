@@ -16,11 +16,13 @@ $(document).ready(function() {
 
 function registerListeners() {
 	$( "#submit" ).click(function() {
-                url = $( "#input_url").val();
-		requested_url = url;
-                $( "#front-page" ).fadeOut("slow",function() {
-                	getDataFromURL(url);
-		});
+	        url = $( "#input_url").val();
+		if (requested_url != url) {
+			requested_url = url;
+	                $( "#front-page" ).fadeOut("slow",function() {
+	                	getDataFromURL(url);
+			});
+		}
         });
 }
 
