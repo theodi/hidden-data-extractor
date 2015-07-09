@@ -48,7 +48,11 @@ function getData() {
 			}
 			if (toAdd != "" && toAdd != "null" && toAdd != "{}" && toAdd != "[]") {
 				key = key.trim();
-				var output = "<tr id='tab-"+ key +"'><td><button id='dispose' onclick='dispose(\"tab-" + key + "\");' value='dispose'>Dispose</button><td><a href='getData.php?url=" + requested_url + "&variable=" + key + "'>" + key + "</a></td><td class='datablock'><pre>" + syntaxHighlight(toAdd) + "</pre></td></tr>";
+				var output = "<tr id='tab-"+ key +"'>";
+				output += "<td><a href='getData.php?url=" + requested_url + "&variable=" + key + "'>" + key + "</a></td>";
+				output += "<td class='datablock'><pre>" + syntaxHighlight(toAdd) + "</pre></td>";
+				output += "<td><button id='dispose' onclick='dispose(\"tab-" + key + "\");' value='dispose'>Hide</button></td>";
+				output += "</tr>";
 				$('#data').append(output);
 				
 			}
