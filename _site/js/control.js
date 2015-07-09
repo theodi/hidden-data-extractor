@@ -26,6 +26,10 @@ function registerListeners() {
         });
 }
 
+function setURL(url) {
+	$('#input_url').val(url);
+}
+
 function getDataFromURL(url) {
 	$('body').append('<iframe style="display: none;" src="server/proxy.php?site='+url+'" id="iframe" onLoad="getData();"></iframe>');
         $( "#result" ).fadeIn("slow",function() {
