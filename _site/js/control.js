@@ -36,6 +36,7 @@ function dispose(id) {
 
 
 function getData() {
+	var ignore = ["parent","top","location","document","chrome"];
 	var myFrame = window.frames[0].window;
 	var output = {};
 	for (key in myFrame) {
@@ -46,8 +47,8 @@ function getData() {
 			} catch(err) {
 				continue;
 			}
-			if (toAdd != "" && toAdd != "null" && toAdd != "{}" && toAdd != "[]") {
-				key = key.trim();
+			key = key.trim();
+			if (toAdd != "" && toAdd != "null" && toAdd != "{}" && toAdd != "[]" && $.inArray(key,ignore) < 0) {
 				var output = "<tr id='tab-"+ key +"'>";
 				output += "<td><a href='getData.php?url=" + requested_url + "&variable=" + key + "'>" + key + "</a></td>";
 				output += "<td class='datablock'><pre>" + syntaxHighlight(toAdd) + "</pre></td>";
