@@ -24,7 +24,7 @@ function registerListeners() {
 }
 
 function getDataFromURL(url) {
-	$('body').append('<iframe style="display: none;" src="server/proxy.php?site='+url+'" id="iframe" onLoad="getData(myFrame);"></iframe>');
+	$('body').append('<iframe style="display: none;" src="server/proxy.php?site='+url+'" id="iframe" onLoad="getData();"></iframe>');
         $( "#result" ).fadeIn("slow",function() {
         })
 }
@@ -34,7 +34,8 @@ function dispose(id) {
 }
 
 
-function getData(myFrame) {
+function getData() {
+	var myFrame = window.frames[0].window;
 	var output = {};
 	for (key in myFrame) {
 		if (typeof myFrame[key] === 'object' && key.substring(0,6)!= "jQuery" ) {
